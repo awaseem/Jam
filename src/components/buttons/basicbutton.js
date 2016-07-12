@@ -13,6 +13,19 @@ class BounceButton extends React.Component {
     this.domNode = ReactDom.findDOMNode(this.refs.bounceButton);
   }
 
+  chooseColor(color) {
+    switch (color) {
+      case 'red':
+        return 'button-primary';
+      case 'green':
+        return 'button-secondary';
+      case 'black':
+        return 'button-dark';
+      default:
+        return '';
+    }
+  }
+
   mouseOver() {
     // change animation to scale out
     this.state = { anime: anime({
@@ -38,7 +51,7 @@ class BounceButton extends React.Component {
   render() {
     return (
       <button
-        className="button-primary"
+        className={this.chooseColor(this.props.color)}
         ref="bounceButton"
         onMouseOver={this.mouseOver}
         onMouseLeave={this.mouseLeave}
@@ -48,5 +61,10 @@ class BounceButton extends React.Component {
     );
   }
 }
+
+BounceButton.propTypes = {
+  children: React.PropTypes.any.isRequired,
+  color: React.PropTypes.string,
+};
 
 export default BounceButton;
