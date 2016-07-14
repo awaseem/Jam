@@ -27,16 +27,18 @@ export default function () {
     <div>
       <div
         style={{
-          paddingTop: '150px',
-          paddingBottom: '150px',
-          background: 'no-repeat center center url(http://i.imgur.com/wC0tc3e.png)',
+          height: '100vh',
+          background: 'no-repeat center url(http://i.imgur.com/wC0tc3e.png)',
           backgroundSize: 'cover',
           width: '100%',
           marginBottom: '50px',
+          textAlign: 'center',
+          color: '#FFF',
         }}
       >
         <H1 align="center">Jam</H1>
         <P align="center">Sweat and Simple</P>
+        <Button color="black">Let's Get Started!</Button>
       </div>
     <div className="container">
       <FadeIn delay={250}>
@@ -53,7 +55,7 @@ export default function () {
             </Row>
             <Row>
               <Col num="two">
-                One
+                Two
               </Col>
               <Col num="ten">
                 Ten
@@ -112,7 +114,7 @@ export default function () {
                 Nine
               </Col>
               <Col num="three">
-                three
+                Three
               </Col>
             </Row>
             <Row>
