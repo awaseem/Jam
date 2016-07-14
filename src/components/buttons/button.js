@@ -21,6 +21,8 @@ class BounceButton extends React.Component {
         return 'button-secondary';
       case 'black':
         return 'button-dark';
+      case 'blue':
+        return 'button-success';
       default:
         return '';
     }

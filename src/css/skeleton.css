@@ -121,6 +121,7 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
+  margin: 0 0 0 0;
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
@@ -284,6 +285,27 @@ input[type="button"].button-dark:focus {
   color: #FFF;
   background-color: #1A2026;
   border-color: #1A2026; }
+.button.button-success,
+button.button-success,
+input[type="submit"].button-success,
+input[type="reset"].button-success,
+input[type="button"].button-success {
+  color: #FFF;
+  background-color: #56A3A6;
+  border-color: #56A3A6; }
+.button.button-success:hover,
+button.button-success:hover,
+input[type="submit"].button-success:hover,
+input[type="reset"].button-success:hover,
+input[type="button"].button-success:hover,
+.button.button-success:focus,
+button.button-success:focus, 
+input[type="submit"].button-success:focus,
+input[type="reset"].button-success:focus,
+input[type="button"].button-success:focus {
+  color: #FFF;
+  background-color: #437F82;
+  border-color: #437F82; }  
 
 
 /* Forms

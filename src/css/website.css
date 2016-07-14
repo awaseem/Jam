@@ -1,0 +1,13 @@
+.grid .row .columns{
+  background-color: #EF5B5B;
+  color: #FFF;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.grid .row .column{
+  background-color: #EF5B5B;
+  color: #FFF;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
