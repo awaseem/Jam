@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import anime from 'animejs';
 
-class BounceButton extends React.Component {
+class Input extends React.Component {
   constructor(props) {
     super(props);
     this.focus = this.focus.bind(this);
@@ -18,7 +18,6 @@ class BounceButton extends React.Component {
     this.state = { anime: anime({
       targets: this.domNode,
       scale: 1.10,
-      delay: 100,
       duration: 500,
     }) };
   }
@@ -28,7 +27,6 @@ class BounceButton extends React.Component {
     this.state = { anime: anime({
       targets: this.domNode,
       scale: 1,
-      delay: 100,
       duration: 500,
     }) };
   }
@@ -50,10 +48,10 @@ class BounceButton extends React.Component {
   }
 }
 
-BounceButton.propTypes = {
+Input.propTypes = {
   label: React.PropTypes.string,
   type: React.PropTypes.string,
   placeholder: React.PropTypes.string,
 };
 
-export default BounceButton;
+export default Input;

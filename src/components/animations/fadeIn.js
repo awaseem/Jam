@@ -5,7 +5,6 @@ import anime from 'animejs';
 class FadeIn extends React.Component {
 
   componentDidMount() {
-    this.domNode = ReactDom.findDOMNode(this.refs.div);
     anime({
       targets: ReactDom.findDOMNode(this.refs.div),
       duration: this.props.duration || 5000,

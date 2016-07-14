@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import anime from 'animejs';
 
-class BounceButton extends React.Component {
+class TextArea extends React.Component {
   constructor(props) {
     super(props);
     this.focus = this.focus.bind(this);
@@ -49,9 +49,9 @@ class BounceButton extends React.Component {
   }
 }
 
-BounceButton.propTypes = {
+TextArea.propTypes = {
   label: React.PropTypes.string,
   placeholder: React.PropTypes.string,
 };
 
-export default BounceButton;
+export default TextArea;
