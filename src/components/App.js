@@ -422,31 +422,116 @@ export default class App extends React.Component {
               <P>Function to fire when the button is double clicked.</P>
               <hr></hr>
             </div>
-            <H2>Inputs</H2>
-            <Row>
-              <Col num="six">
-                <Input
-                  change={this.emailInput}
-                  label="Email" placeholder="test@test.com" type="email"
-                />
-              </Col>
-              <Col num="six">
-                <Input change={this.nameInput} label="Name" placeholder="Jon Doe" type="text" />
-              </Col>
-              <Col num="twelve">
-                <Dropdown
-                  change={this.dropdownInput}
-                  label="What's your choice?" options={['hello', 'hi', 'heyy']}
-                />
-              </Col>
-              <Col num="twelve">
-                <TextArea
-                  change={this.messageTextArea}
-                  label="Message" placeholder="Enter your message here"
-                />
-              </Col>
-            </Row>
-            <hr></hr>
+            <div className="input">
+              <H2>Inputs</H2>
+              <P>
+                Inputs are nice and easy to use.
+                They all expose functions that allow you to retrive user inputs
+                and have pop animation when focused.
+              </P>
+              <Row>
+                <Col num="six">
+                  <Input
+                    change={this.emailInput}
+                    label="Email" placeholder="test@test.com" type="email"
+                  />
+                </Col>
+                <Col num="six">
+                  <Input change={this.nameInput} label="Name" placeholder="Jon Doe" type="text" />
+                </Col>
+                <Col num="twelve">
+                  <Dropdown
+                    change={this.dropdownInput}
+                    label="What's your choice?" options={['hello', 'hi', 'heyy']}
+                  />
+                </Col>
+                <Col num="twelve">
+                  <TextArea
+                    change={this.messageTextArea}
+                    label="Message" placeholder="Enter your message here"
+                  />
+                </Col>
+              </Row>
+              <CodeBlock>
+                {
+                  `
+<Input
+  change={this.emailInput}
+  label="Email" placeholder="test@test.com" type="email"
+/>
+<Input change={this.nameInput} label="Name" placeholder="Jon Doe" type="text" />
+<Dropdown
+  change={this.dropdownInput}
+  label="What's your choice?" options={['hello', 'hi', 'heyy']}
+/>
+<TextArea
+  change={this.messageTextArea}
+  label="Message" placeholder="Enter your message here"
+/>`}
+              </CodeBlock>
+              <Row>
+                <Col num="four">
+                  <H4>Input</H4>
+                  <P>Simple text input.</P>
+                  <H5>Props</H5>
+                  <P><em>label: String</em></P>
+                  <P>Label for the text input.</P>
+                  <P><em>type: String</em></P>
+                  <P>Type for the text input.</P>
+                  <P><em>placeholder: String</em></P>
+                  <P>Placeholder for the text input.</P>
+                  <P><em>name: String</em></P>
+                  <P>Name for the text input.</P>
+                  <P><em>maxLength: Number</em></P>
+                  <P>Max length for the text input.</P>
+                  <P><em>disabled: Boolean</em></P>
+                  <P>Disable the input if set to true.</P>
+                  <P><em>required: Boolean</em></P>
+                  <P>Required input if set to true.</P>
+                  <P><em>change: Function</em></P>
+                  <P>Function fired when the input changes.</P>
+                </Col>
+                <Col num="four">
+                  <H4>Dropdown</H4>
+                  <P>Simple dropdown.</P>
+                  <H5>Props</H5>
+                  <P><em>label: String</em></P>
+                  <P>Label for the text input.</P>
+                  <P><em>options: Array</em></P>
+                  <P>An array of options for the dropdown.</P>
+                  <P><em>name: String</em></P>
+                  <P>Name for the text input.</P>
+                  <P><em>disabled: Boolean</em></P>
+                  <P>Disable the input if set to true.</P>
+                  <P><em>required: Boolean</em></P>
+                  <P>Required input if set to true.</P>
+                  <P><em>change: Function</em></P>
+                  <P>Function fired when the input changes.</P>
+                </Col>
+                <Col num="four">
+                  <H4>Text Area</H4>
+                  <P>Simple text area.</P>
+                  <H5>Props</H5>
+                  <P><em>label: String</em></P>
+                  <P>Label for the text input.</P>
+                  <P><em>type: String</em></P>
+                  <P>Type for the text input.</P>
+                  <P><em>placeholder: String</em></P>
+                  <P>Placeholder for the text input.</P>
+                  <P><em>name: String</em></P>
+                  <P>Name for the text input.</P>
+                  <P><em>maxLength: Number</em></P>
+                  <P>Max length for the text input.</P>
+                  <P><em>disabled: Boolean</em></P>
+                  <P>Disable the input if set to true.</P>
+                  <P><em>required: Boolean</em></P>
+                  <P>Required input if set to true.</P>
+                  <P><em>change: Function</em></P>
+                  <P>Function fired when the input changes.</P>
+                </Col>
+              </Row>
+              <hr></hr>
+            </div>
             <H2>Code</H2>
             <Code>Hello world!</Code>
             <CodeBlock>
