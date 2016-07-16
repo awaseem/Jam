@@ -5,7 +5,7 @@ import anime from 'animejs';
 class FadeIn extends React.Component {
   componentDidMount() {
     this.anime = anime({
-      targets: ReactDom.findDOMNode(this.refs.div),
+      targets: ReactDom.findDOMNode(this.refs.fadeIn),
       duration: this.props.duration || 5000,
       opacity: 1,
       delay: this.props.delay || 250,
@@ -18,13 +18,13 @@ class FadeIn extends React.Component {
 
   componentDidUpdate() {
     if (this.props.play) {
-      this.anime.play();
+      this.anime.restart();
     }
   }
 
   render() {
     return (
-      <div ref="div" style={{ opacity: 0 }}>
+      <div ref="fadeIn" style={{ opacity: 0 }}>
         {this.props.children}
       </div>
     );

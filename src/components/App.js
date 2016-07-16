@@ -26,12 +26,23 @@ import Header from './header/header';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { playPopIn: false };
-    this.click = this.click.bind(this);
+    this.state = { playPopIn: false, playFadeIn: false };
+    this.clickPopIn = this.clickPopIn.bind(this);
+    this.clickFadeIn = this.clickFadeIn.bind(this);
   }
 
-  click() {
-    this.setState({ playPopIn: true });
+  clickPopIn() {
+    this.setState({
+      playPopIn: true,
+      playFadeIn: false,
+    });
+  }
+
+  clickFadeIn() {
+    this.setState({
+      playFadeIn: true,
+      playPopIn: false,
+    });
   }
 
   render() {
@@ -200,7 +211,7 @@ export default class App extends React.Component {
             </CodeBlock>
             <hr></hr>
           </FadeIn>
-          <FadeIn delay={1250}>
+          <FadeIn autoplay delay={1250}>
             <H2>List</H2>
             <Row>
               <Col num="six">
@@ -237,12 +248,18 @@ export default class App extends React.Component {
             <Img src="http://efdreams.com/data_images/dreams/jam/jam-11.jpg" alt="test" />
             <hr></hr>
           </FadeIn>
-          <FadeIn autoplay delay={1750}>
+          <FadeIn autoplay delay={0}>
             <H2>Animations</H2>
+            <H3>Pop In</H3>
             <PopIn autoplay play={this.state.playPopIn}>
-              <Button onClick={this.click}>play</Button>
-              <H1>Hello world</H1>
+              <H4>Hello world, I'll Pop In!</H4>
             </PopIn>
+            <Button click={this.clickPopIn}>play</Button>
+            <H3>Fade In</H3>
+            <FadeIn autoplay play={this.state.playFadeIn} delay={0}>
+              <H4>Hello world, I'll Fade In!</H4>
+            </FadeIn>
+            <Button click={this.clickFadeIn}>play</Button>
             <hr></hr>
           </FadeIn>
         </div>

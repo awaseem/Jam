@@ -57,6 +57,8 @@ class BounceButton extends React.Component {
         ref="bounceButton"
         onMouseOver={this.mouseOver}
         onMouseLeave={this.mouseLeave}
+        onClick={this.props.click}
+        onDoubleClick={this.props.doubleClick}
       >
           {this.props.children}
       </button>
@@ -67,6 +69,8 @@ class BounceButton extends React.Component {
 BounceButton.propTypes = {
   children: React.PropTypes.any.isRequired,
   color: React.PropTypes.string,
+  click: React.PropTypes.func,
+  doubleClick: React.PropTypes.func,
 };
 
 export default BounceButton;

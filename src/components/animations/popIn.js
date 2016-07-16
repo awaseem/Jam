@@ -6,7 +6,7 @@ class PopIn extends React.Component {
 
   componentDidMount() {
     this.anime = anime({
-      targets: ReactDom.findDOMNode(this.refs.div),
+      targets: ReactDom.findDOMNode(this.refs.popIn),
       duration: this.props.duration || 1000,
       scale: 1,
       delay: this.props.delay || 250,
@@ -19,13 +19,13 @@ class PopIn extends React.Component {
 
   componentDidUpdate() {
     if (this.props.play) {
-      this.anime.play();
+      this.anime.restart();
     }
   }
 
   render() {
     return (
-      <div ref="div" style={{ transform: 'scale(0)' }}>
+      <div ref="popIn" style={{ transform: 'scale(0)' }}>
         {this.props.children}
       </div>
     );
