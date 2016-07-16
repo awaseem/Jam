@@ -5,7 +5,13 @@ function Dropdown(props) {
   return (
     <div>
       <label>{props.label}</label>
-      <select className="u-full-width">
+      <select
+        onChange={(e) => props.change(e.target.value)}
+        className="u-full-width"
+        name={props.name}
+        required={props.required}
+        disabled={props.disabled}
+      >
         {options}
       </select>
     </div>
@@ -15,6 +21,10 @@ function Dropdown(props) {
 Dropdown.propTypes = {
   label: React.PropTypes.string,
   options: React.PropTypes.array,
+  change: React.PropTypes.func.isRequired,
+  disabled: React.PropTypes.bool,
+  name: React.PropTypes.string,
+  required: React.PropTypes.bool,
 };
 
 export default Dropdown;

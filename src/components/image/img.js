@@ -21,7 +21,8 @@ class Img extends React.Component {
     return (
       <img
         ref="image"
-        height="400px"
+        width={this.props.width || '300px'}
+        height={this.props.height || 'auto'}
         style={{ opacity: 0 }}
         className="u-max-full-width"
         src={this.props.src}
@@ -37,6 +38,8 @@ Img.propTypes = {
   alt: React.PropTypes.string.isRequired,
   duration: React.PropTypes.number,
   delay: React.PropTypes.number,
+  width: React.PropTypes.string,
+  height: React.PropTypes.string,
 };
 
 export default Img;

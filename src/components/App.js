@@ -71,6 +71,22 @@ export default class App extends React.Component {
     });
   }
 
+  emailInput(value) {
+    console.log(value);
+  }
+
+  nameInput(value) {
+    console.log(value);
+  }
+
+  dropdownInput(value) {
+    console.log(value);
+  }
+
+  messageTextArea(value) {
+    console.log(value);
+  }
+
   render() {
     return (
       <div>
@@ -214,16 +230,25 @@ export default class App extends React.Component {
             <H2>Inputs</H2>
             <Row>
               <Col num="six">
-                <Input label="Email" placeholder="test@test.com" type="email" />
+                <Input
+                  change={this.emailInput}
+                  label="Email" placeholder="test@test.com" type="email"
+                />
               </Col>
               <Col num="six">
-                <Input label="Name" placeholder="Jon Doe" type="text" />
+                <Input change={this.nameInput} label="Name" placeholder="Jon Doe" type="text" />
               </Col>
               <Col num="twelve">
-                <Dropdown label="What's your choice?" options={['hello', 'hi', 'heyy']} />
+                <Dropdown
+                  change={this.dropdownInput}
+                  label="What's your choice?" options={['hello', 'hi', 'heyy']}
+                />
               </Col>
               <Col num="twelve">
-                <TextArea label="Message" placeholder="Enter your message here" />
+                <TextArea
+                  change={this.messageTextArea}
+                  label="Message" placeholder="Enter your message here"
+                />
               </Col>
             </Row>
             <hr></hr>
@@ -274,7 +299,7 @@ export default class App extends React.Component {
             <Img src="http://efdreams.com/data_images/dreams/jam/jam-11.jpg" alt="test" />
             <hr></hr>
           </FadeIn>
-          <FadeIn autoplay delay={0}>
+          <FadeIn autoplay delay={1750}>
             <H2>Animations</H2>
             <H3>Pop In</H3>
             <PopIn autoplay play={this.state.playPopIn}>

@@ -7,10 +7,15 @@ class TextArea extends React.Component {
     super(props);
     this.focus = this.focus.bind(this);
     this.blur = this.blur.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
     this.domNode = ReactDom.findDOMNode(this.refs.zoomInput);
+  }
+
+  handleChange(e) {
+    this.props.change(e.target.value);
   }
 
   focus() {
@@ -43,6 +48,11 @@ class TextArea extends React.Component {
           className="u-full-width"
           placeholder={this.props.placeholder}
           ref="zoomInput"
+          name={this.props.name}
+          maxLength={this.props.maxLength}
+          required={this.props.required}
+          disabled={this.props.disabled}
+          onChange={this.handleChange}
         />
       </div>
     );
@@ -52,6 +62,11 @@ class TextArea extends React.Component {
 TextArea.propTypes = {
   label: React.PropTypes.string,
   placeholder: React.PropTypes.string,
+  change: React.PropTypes.func.isRequired,
+  disabled: React.PropTypes.bool,
+  required: React.PropTypes.bool,
+  maxLength: React.PropTypes.number,
+  name: React.PropTypes.string,
 };
 
 export default TextArea;

@@ -7,10 +7,15 @@ class Input extends React.Component {
     super(props);
     this.focus = this.focus.bind(this);
     this.blur = this.blur.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
     this.domNode = ReactDom.findDOMNode(this.refs.zoomInput);
+  }
+
+  handleChange(e) {
+    this.props.change(e.target.value);
   }
 
   focus() {
@@ -41,7 +46,12 @@ class Input extends React.Component {
           className="u-full-width"
           type={this.props.type}
           placeholder={this.props.placeholder}
+          name={this.props.name}
           ref="zoomInput"
+          onChange={this.handleChange}
+          maxLength={this.props.maxLength}
+          disabled={this.props.disabled}
+          required={this.props.required}
         />
       </div>
     );
@@ -52,6 +62,11 @@ Input.propTypes = {
   label: React.PropTypes.string,
   type: React.PropTypes.string,
   placeholder: React.PropTypes.string,
+  name: React.PropTypes.string,
+  change: React.PropTypes.func.isRequired,
+  maxLength: React.PropTypes.number,
+  disabled: React.PropTypes.bool,
+  required: React.PropTypes.bool,
 };
 
 export default Input;
