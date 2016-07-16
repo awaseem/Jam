@@ -1,11 +1,10 @@
 import React from 'react';
-import Code from './code';
 
 function CodeBlock(props) {
   return (
-    <pre><Code>
+    <pre><code>
       {props.children}
-    </Code></pre>
+    </code></pre>
   );
 }
 
