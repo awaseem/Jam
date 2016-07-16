@@ -8,6 +8,8 @@ import H6 from './typography/h6';
 import P from './typography/p';
 import FadeIn from './animations/fadeIn';
 import PopIn from './animations/popIn';
+import PopOut from './animations/popOut';
+import FadeOut from './animations/fadeOut';
 import Button from './buttons/button';
 import Input from './inputs/input';
 import TextArea from './inputs/textArea';
@@ -26,15 +28,19 @@ import Header from './header/header';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { playPopIn: false, playFadeIn: false };
+    this.state = { playPopIn: false, playFadeIn: false, playPopOut: false, playFadeOut: false };
     this.clickPopIn = this.clickPopIn.bind(this);
     this.clickFadeIn = this.clickFadeIn.bind(this);
+    this.clickFadeOut = this.clickFadeOut.bind(this);
+    this.clickPopOut = this.clickPopOut.bind(this);
   }
 
   clickPopIn() {
     this.setState({
       playPopIn: true,
       playFadeIn: false,
+      playPopOut: false,
+      playFadeOut: false,
     });
   }
 
@@ -42,6 +48,26 @@ export default class App extends React.Component {
     this.setState({
       playFadeIn: true,
       playPopIn: false,
+      playPopOut: false,
+      playFadeOut: false,
+    });
+  }
+
+  clickPopOut() {
+    this.setState({
+      playFadeIn: false,
+      playPopIn: false,
+      playPopOut: true,
+      playFadeOut: false,
+    });
+  }
+
+  clickFadeOut() {
+    this.setState({
+      playFadeIn: false,
+      playPopIn: false,
+      playPopOut: false,
+      playFadeOut: true,
     });
   }
 
@@ -260,6 +286,15 @@ export default class App extends React.Component {
               <H4>Hello world, I'll Fade In!</H4>
             </FadeIn>
             <Button click={this.clickFadeIn}>play</Button>
+            <PopOut play={this.state.playPopOut}>
+              <H4>Hello world, I'll Pop In!</H4>
+            </PopOut>
+            <Button click={this.clickPopOut}>play</Button>
+            <H3>Fade Out</H3>
+            <FadeOut play={this.state.playFadeOut} delay={0}>
+              <H4>Hello world, I'll Fade In!</H4>
+            </FadeOut>
+            <Button click={this.clickFadeOut}>play</Button>
             <hr></hr>
           </FadeIn>
         </div>
