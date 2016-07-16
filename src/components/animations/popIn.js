@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import anime from 'animejs';
 
-class FadeIn extends React.Component {
+class PopIn extends React.Component {
+
   componentDidMount() {
     this.anime = anime({
       targets: ReactDom.findDOMNode(this.refs.div),
-      duration: this.props.duration || 5000,
-      opacity: 1,
+      duration: this.props.duration || 1000,
+      scale: 1,
       delay: this.props.delay || 250,
       autoplay: false,
     });
@@ -24,14 +25,14 @@ class FadeIn extends React.Component {
 
   render() {
     return (
-      <div ref="div" style={{ opacity: 0 }}>
+      <div ref="div" style={{ transform: 'scale(0)' }}>
         {this.props.children}
       </div>
     );
   }
 }
 
-FadeIn.propTypes = {
+PopIn.propTypes = {
   children: React.PropTypes.any.isRequired,
   duration: React.PropTypes.number,
   delay: React.PropTypes.number,
@@ -39,4 +40,4 @@ FadeIn.propTypes = {
   autoplay: React.PropTypes.bool,
 };
 
-export default FadeIn;
+export default PopIn;
