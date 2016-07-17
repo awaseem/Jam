@@ -1,1 +1,1 @@
-![alt text](assests/JamCover.png "Logo Title Text 1")
+![alt text](./assests/JamCover.png "Logo Title Text 1")

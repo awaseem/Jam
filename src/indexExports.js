@@ -1,4 +1,3 @@
-import 'react';
 import H1 from './components/typography/h1';
 import H2 from './components/typography/h2';
 import H3 from './components/typography/h3';

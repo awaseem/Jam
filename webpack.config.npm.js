@@ -2,7 +2,7 @@
 var webpack = require("webpack");
 
 module.exports = {
-    entry: "./src/indexProd.js",
+    entry: "./src/indexExports.js",
     module: {
         loaders: [{
             test: /\.jsx?$/,
@@ -19,7 +19,7 @@ module.exports = {
     output: {
         path: __dirname + "/lib/",
         filename: 'index.js',
-        library: 'shared-components',
+        library: 'jam',
         libraryTarget: 'umd'
     },
     externals: {

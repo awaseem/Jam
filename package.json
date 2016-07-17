@@ -1,21 +1,24 @@
 {
-  "name": "jam",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "jam-components",
+  "version": "0.1.6",
+  "description": "Sweet and Simple",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack-dev-server",
-    "deploy": "NODE_ENV=production webpack -p --config webpack.config.production.js"
+    "build": "NODE_ENV=production webpack -p --config webpack.config.npm.js",
+    "prepublish": "npm run build"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/awaseem/jam.git"
+  },
+  "author": "Ali Waseem",
+  "license": "MIT",
+  "devDependencies": {
     "animejs": "^1.1.0",
     "react": "^15.2.1",
-    "react-dom": "^15.2.1"
-  },
-  "devDependencies": {
+    "react-dom": "^15.2.1",    
     "babel-core": "^6.10.4",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
@@ -32,5 +35,8 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
-  }
+  },
+  "files": [
+    "lib/"
+  ]
 }
