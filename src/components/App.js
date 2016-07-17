@@ -23,7 +23,13 @@ import Img from './image/img';
 import Row from './grid/row';
 import Col from './grid/col';
 import TextCenter from './helpers/centerText';
+import Container from './helpers/container';
 import Header from './header/header';
+import Hr from './misc/hr';
+import Link from './misc/link';
+import Bold from './misc/bold';
+import Emp from './misc/emp';
+import Underline from './misc/underline';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -97,19 +103,19 @@ export default class App extends React.Component {
             <TextCenter><Button color="black">Let's Get Started</Button></TextCenter>
           </Header>
         </FadeIn>
-        <div className="container">
+        <Container>
           <FadeIn autoplay delay={500}>
             <div id="about-section">
               <H2>About</H2>
               <P>
                 Jam is a simple set of React components that I use in my projects moving forward.
-                It's built on my favorite CSS framework <a href="http://getskeleton.com/">Skeleton</a>.
+                It's built on my favorite CSS framework <Link href="http://getskeleton.com/">Skeleton</Link>.
                 Just like Skeleton,
                 Jam is only a handful of components and doesn't include all the bells and whistles
                 (you can always add that yourself).
                 If you like the way it looks and feels give it a try!
               </P>
-              <hr></hr>
+              <Hr />
             </div>
             <div id="getting-started">
               <H2>Getting Started</H2>
@@ -127,7 +133,7 @@ export default class App extends React.Component {
                 `Import React from 'react';\nImport { Button } from 'jam';`
               }
               </CodeBlock>
-              <hr></hr>
+              <Hr />
             </div>
             <div className="grid">
               <H2>Grid</H2>
@@ -325,7 +331,7 @@ export default class App extends React.Component {
               <H5>Props</H5>
               <P><em>num: String</em></P>
               <P>
-                The number of columns in string form
+                The number of columns in string form.
               </P>
               <CodeBlock>
                 {"<Col num=\"one\"></Col>"}
@@ -337,7 +343,7 @@ export default class App extends React.Component {
               <CodeBlock>
                 {"<Row></Row>"}
               </CodeBlock>
-              <hr></hr>
+              <Hr />
             </div>
             <div className="typography">
               <H2>Typography</H2>
@@ -348,7 +354,7 @@ export default class App extends React.Component {
                     header and paragraph is wrapped
                     in a React component.
                     So each tag starts with a Capital instead.
-                    Other type basics like <a href="">anchors</a>, <b>strong</b>, <em>emphasis</em>,
+                    Other type basics like <Link href="">anchors</Link>, <Bold>strong</Bold>, <Emp>emphasis</Emp>,
                     and <u>underline</u> are all obviously included.
                   </P>
                   <P>
@@ -356,7 +362,7 @@ export default class App extends React.Component {
                     set at 15rem (15px) over a 1.6 line height (24px).
                   </P>
                   <H5>Props</H5>
-                  <P><em>align: String</em></P>
+                  <P><Emp>align: String</Emp></P>
                   <P>The text alignment for alignment.</P>
                   <CodeBlock>
                   {`<H1>Heading</H1>
@@ -378,7 +384,7 @@ export default class App extends React.Component {
                   <P>Paragraph</P>
                 </Col>
               </Row>
-              <hr></hr>
+              <Hr />
             </div>
             <div className="buttons">
               <H2>Buttons</H2>
@@ -414,13 +420,13 @@ export default class App extends React.Component {
               }
               </CodeBlock>
               <H5>Props</H5>
-              <P><em>color: String</em></P>
-              <P>Buttons can only be range of certian colors: red, green, black, blue</P>
-              <P><em>click: Function</em></P>
+              <P><Emp>color: String</Emp></P>
+              <P>Buttons can only be range of certian colors: red, green, black, blue.</P>
+              <P><Emp>click: Function</Emp></P>
               <P>Function to fire when the button is clicked.</P>
-              <P><em>doubleClick: Function</em></P>
+              <P><Emp>doubleClick: Function</Emp></P>
               <P>Function to fire when the button is double clicked.</P>
-              <hr></hr>
+              <Hr />
             </div>
             <div className="input">
               <H2>Inputs</H2>
@@ -474,127 +480,306 @@ export default class App extends React.Component {
                   <H4>Input</H4>
                   <P>Simple text input.</P>
                   <H5>Props</H5>
-                  <P><em>label: String</em></P>
+                  <P><Emp>label: String</Emp></P>
                   <P>Label for the text input.</P>
-                  <P><em>type: String</em></P>
+                  <P><Emp>type: String</Emp></P>
                   <P>Type for the text input.</P>
-                  <P><em>placeholder: String</em></P>
+                  <P><Emp>placeholder: String</Emp></P>
                   <P>Placeholder for the text input.</P>
-                  <P><em>name: String</em></P>
+                  <P><Emp>name: String</Emp></P>
                   <P>Name for the text input.</P>
-                  <P><em>maxLength: Number</em></P>
+                  <P><Emp>maxLength: Number</Emp></P>
                   <P>Max length for the text input.</P>
-                  <P><em>disabled: Boolean</em></P>
+                  <P><Emp>disabled: Boolean</Emp></P>
                   <P>Disable the input if set to true.</P>
-                  <P><em>required: Boolean</em></P>
+                  <P><Emp>required: Boolean</Emp></P>
                   <P>Required input if set to true.</P>
-                  <P><em>change: Function</em></P>
+                  <P><Emp>change: Function</Emp></P>
                   <P>Function fired when the input changes.</P>
                 </Col>
                 <Col num="four">
                   <H4>Dropdown</H4>
                   <P>Simple dropdown.</P>
                   <H5>Props</H5>
-                  <P><em>label: String</em></P>
+                  <P><Emp>label: String</Emp></P>
                   <P>Label for the text input.</P>
-                  <P><em>options: Array</em></P>
+                  <P><Emp>options: Array</Emp></P>
                   <P>An array of options for the dropdown.</P>
-                  <P><em>name: String</em></P>
+                  <P><Emp>name: String</Emp></P>
                   <P>Name for the text input.</P>
-                  <P><em>disabled: Boolean</em></P>
+                  <P><Emp>disabled: Boolean</Emp></P>
                   <P>Disable the input if set to true.</P>
-                  <P><em>required: Boolean</em></P>
+                  <P><Emp>required: Boolean</Emp></P>
                   <P>Required input if set to true.</P>
-                  <P><em>change: Function</em></P>
+                  <P><Emp>change: Function</Emp></P>
                   <P>Function fired when the input changes.</P>
                 </Col>
                 <Col num="four">
                   <H4>Text Area</H4>
                   <P>Simple text area.</P>
                   <H5>Props</H5>
-                  <P><em>label: String</em></P>
+                  <P><Emp>label: String</Emp></P>
                   <P>Label for the text input.</P>
-                  <P><em>type: String</em></P>
+                  <P><Emp>type: String</Emp></P>
                   <P>Type for the text input.</P>
-                  <P><em>placeholder: String</em></P>
+                  <P><Emp>placeholder: String</Emp></P>
                   <P>Placeholder for the text input.</P>
-                  <P><em>name: String</em></P>
+                  <P><Emp>name: String</Emp></P>
                   <P>Name for the text input.</P>
-                  <P><em>maxLength: Number</em></P>
+                  <P><Emp>maxLength: Number</Emp></P>
                   <P>Max length for the text input.</P>
-                  <P><em>disabled: Boolean</em></P>
+                  <P><Emp>disabled: Boolean</Emp></P>
                   <P>Disable the input if set to true.</P>
-                  <P><em>required: Boolean</em></P>
+                  <P><Emp>required: Boolean</Emp></P>
                   <P>Required input if set to true.</P>
-                  <P><em>change: Function</em></P>
+                  <P><Emp>change: Function</Emp></P>
                   <P>Function fired when the input changes.</P>
                 </Col>
               </Row>
-              <hr></hr>
+              <Hr />
             </div>
-            <H2>Code</H2>
-            <Code>Hello world!</Code>
-            <CodeBlock>
-              Hello world!<br />
-              How are you?
-            </CodeBlock>
-            <hr></hr>
-            <H2>List</H2>
-            <Row>
-              <Col num="six">
-                <Ul>
-                  <Li>Item 1</Li>
-                  <Li>
-                    Item 2
-                    <Ul>
-                      <Li>Item 2.1</Li>
-                      <Li>Item 2.2</Li>
-                    </Ul>
-                  </Li>
-                  <Li>Item 3</Li>
-                </Ul>
-              </Col>
-              <Col num="six">
-                <Ol>
-                  <Li>Item 1</Li>
-                  <Li>
-                    Item 2
-                    <Ol>
-                      <Li>Item 2.1</Li>
-                      <Li>Item 2.2</Li>
-                    </Ol>
-                  </Li>
-                  <Li>Item 3</Li>
-                </Ol>
-              </Col>
-            </Row>
-            <hr></hr>
-            <H2>Images</H2>
-            <Img src="http://efdreams.com/data_images/dreams/jam/jam-11.jpg" alt="test" />
-            <hr></hr>
-            <H2>Animations</H2>
-            <H3>Pop In</H3>
-            <PopIn autoplay play={this.state.playPopIn}>
-              <H4>Hello world, I'll Pop In!</H4>
-            </PopIn>
-            <Button click={this.clickPopIn}>play</Button>
-            <H3>Fade In</H3>
-            <FadeIn autoplay play={this.state.playFadeIn} delay={0}>
-              <H4>Hello world, I'll Fade In!</H4>
-            </FadeIn>
-            <Button click={this.clickFadeIn}>play</Button>
-            <PopOut play={this.state.playPopOut}>
-              <H4>Hello world, I'll Pop In!</H4>
-            </PopOut>
-            <Button click={this.clickPopOut}>play</Button>
-            <H3>Fade Out</H3>
-            <FadeOut play={this.state.playFadeOut} delay={0}>
-              <H4>Hello world, I'll Fade In!</H4>
-            </FadeOut>
-            <Button click={this.clickFadeOut}>play</Button>
-            <hr></hr>
+            <div className="code">
+              <H2>Code</H2>
+              <P>
+                Code is pretty basic,
+                one can be used for inlines with
+                <Code>{'<Code>'}</Code> like this: <Code>Hello world!</Code>
+                or within a block (<Code>{'<CodeBlock>'}</Code>) like this:
+              </P>
+              <CodeBlock>
+                {`Hello World\nHow are you?`}
+              </CodeBlock>
+              <Hr />
+            </div>
+            <div className="List">
+              <H2>List</H2>
+              <P>
+                Both lists use <Code>{'<Li>'}</Code>
+                for the list item, but come in two flavors.
+              </P>
+              <Row>
+                <Col num="six">
+                  <Ul>
+                    <Li>Item 1</Li>
+                    <Li>
+                      Item 2
+                      <Ul>
+                        <Li>Item 2.1</Li>
+                        <Li>Item 2.2</Li>
+                      </Ul>
+                    </Li>
+                    <Li>Item 3</Li>
+                  </Ul>
+                  <H4>Unordered List</H4>
+                  <CodeBlock>
+                  {
+                    `<Ul>
+  <Li>Item 1</Li>
+  <Li>
+    Item 2
+    <Ul>
+      <Li>Item 2.1</Li>
+      <Li>Item 2.2</Li>
+    </Ul>
+  </Li>
+  <Li>Item 3</Li>
+</Ul>`
+                  }
+                  </CodeBlock>
+                </Col>
+                <Col num="six">
+                  <Ol>
+                    <Li>Item 1</Li>
+                    <Li>
+                      Item 2
+                      <Ol>
+                        <Li>Item 2.1</Li>
+                        <Li>Item 2.2</Li>
+                      </Ol>
+                    </Li>
+                    <Li>Item 3</Li>
+                  </Ol>
+                  <H4>Ordered List</H4>
+                  <CodeBlock>
+                  {
+                    `<Ol>
+  <Li>Item 1</Li>
+  <Li>
+    Item 2
+    <Ol>
+      <Li>Item 2.1</Li>
+      <Li>Item 2.2</Li>
+    </Ol>
+  </Li>
+  <Li>Item 3</Li>
+</Ol>`
+                  }
+                  </CodeBlock>
+                </Col>
+              </Row>
+              <Hr />
+            </div>
+            <div className="image">
+              <H2>Images</H2>
+              <P>
+                Images are pretty standard with basic props,
+                but also fades in when they are loaded.
+              </P>
+              <Img src="http://s.realtyninja.com/static/media/med/2738_317908a6_peace-bridge-skyline-calgary-xl.jpg" alt="test" />
+              <CodeBlock>
+              {
+                '<Img src="http://s.realtyninja.com/static/media/med/2738_317908a6_peace-bridge-skyline-calgary-xl.jpg" alt="test" />'
+              }
+              </CodeBlock>
+              <H5>Props</H5>
+              <P><Emp>src: String</Emp></P>
+              <P>Image source.</P>
+              <P><Emp>alt: String</Emp></P>
+              <P>Image alt.</P>
+              <P><Emp>duration: Number</Emp></P>
+              <P>Animation duration after the image is loaded.</P>
+              <P><Emp>delay: Number</Emp></P>
+              <P>Animation delay after the image is loaded.</P>
+              <P><Emp>width: String</Emp></P>
+              <P>Image width (can be a CSS property).</P>
+              <P><Emp>height: String</Emp></P>
+              <P>Image height (can be a CSS property).</P>
+              <Hr />
+            </div>
+            <div className="animations">
+              <H2>Animations</H2>
+              <P>
+                All animations share the same props that
+                trigger and change the animation itself.
+                To animate a component simply wrap it within the animation and trigger it manually
+                or on its mount.
+              </P>
+              <H4>Pop In</H4>
+              <Row>
+                <Col num="six">
+                  <CodeBlock>
+                  {
+                    `<PopIn autoplay play={this.state.playPopIn}>
+  <H5>Hello world, I'll Pop In!</H5>
+</PopIn>`
+                  }
+                  </CodeBlock>
+                </Col>
+                <Col num="six">
+                  <PopIn autoplay play={this.state.playPopIn}>
+                    <H5>Hello world, I'll Pop In!</H5>
+                  </PopIn>
+                  <Button click={this.clickPopIn}>play</Button>
+                </Col>
+              </Row>
+              <H4>Fade In</H4>
+              <Row>
+                <Col num="six">
+                  <CodeBlock>
+                  {
+                    `<FadeIn autoplay play={this.state.playFadeIn}>
+  <H5>Hello world, I'll Fade In!</H5>
+</FadeIn>`
+                  }
+                  </CodeBlock>
+                </Col>
+                <Col num="six">
+                  <FadeIn autoplay play={this.state.playFadeIn} delay={0}>
+                    <H5>Hello world, I'll Fade In!</H5>
+                  </FadeIn>
+                  <Button click={this.clickFadeIn}>play</Button>
+                </Col>
+              </Row>
+              <H4>Pop Out</H4>
+              <Row>
+                <Col num="six">
+                  <CodeBlock>
+                  {
+                    `<PopOut play={this.state.playPopOut}>
+  <H5>Hello world, I'll Pop In!</H5>
+</PopOut>`
+                  }
+                  </CodeBlock>
+                </Col>
+                <Col num="six">
+                  <PopOut play={this.state.playPopOut}>
+                    <H5>Hello world, I'll Pop In!</H5>
+                  </PopOut>
+                  <Button click={this.clickPopOut}>play</Button>
+                </Col>
+              </Row>
+              <H4>Fade Out</H4>
+              <Row>
+                <Col num="six">
+                  <CodeBlock>
+                  {
+                    `<FadeOut play={this.state.playFadeOut} delay={0}>
+  <H5>Hello world, I'll Fade In!</H5>
+</FadeOut>`
+                  }
+                  </CodeBlock>
+                </Col>
+                <Col num="six">
+                  <FadeOut play={this.state.playFadeOut} delay={0}>
+                    <H5>Hello world, I'll Fade In!</H5>
+                  </FadeOut>
+                  <Button click={this.clickFadeOut}>play</Button>
+                </Col>
+              </Row>
+              <H5>Props</H5>
+              <P><Emp>duration: Number</Emp></P>
+              <P>Animation duration.</P>
+              <P><Emp>delay: Number</Emp></P>
+              <P>Animation delay.</P>
+              <P><Emp>play: Boolean</Emp></P>
+              <P>If this props is set to true the animation will play.</P>
+              <P><Emp>autoplay: String</Emp></P>
+              <P>Animation will play on mount.</P>
+              <Hr />
+            </div>
+            <div className="helpers">
+              <H2>Helpers</H2>
+              <P>
+                There are simple helper that can help center text,
+                center content, and create centered containers.
+              </P>
+              <H4>Container</H4>
+              <P>Main centered wrapper.</P>
+              <CodeBlock>{'<Container></Container>'}</CodeBlock>
+              <H4>TextCenter</H4>
+              <P>Center text.</P>
+              <CodeBlock>{'<TextCenter></TextCenter>'}</CodeBlock>
+              <H4>Center</H4>
+              <P>Center content like images.</P>
+              <CodeBlock>{'<Center></Center>'}</CodeBlock>
+              <Hr />
+            </div>
+            <div className="miscellaneous">
+              <H2>Miscellaneous</H2>
+              <H4>Link</H4>
+              <P>Wrapper around anchor with href.</P>
+              <CodeBlock>{'<Link href="http://url">Hello!</Link>'}</CodeBlock>
+              <H5>Props</H5>
+              <P><em>href: String</em></P>
+              <P>Link for anchor.</P>
+              <H4>Hr</H4>
+              <P>Wrapper around thematic break.</P>
+              <CodeBlock>{'<Hr />'}</CodeBlock>
+              <H4>Emp</H4>
+              <P>Wrapper around emphasis.</P>
+              <CodeBlock>{'<Emp></Emp>'}</CodeBlock>
+              <H4>Bold</H4>
+              <P>Wrapper around bold.</P>
+              <CodeBlock>{'<Bold></Bold>'}</CodeBlock>
+              <H4>Underline</H4>
+              <P>Wrapper around underline.</P>
+              <CodeBlock>{'<Underline></Underline>'}</CodeBlock>
+            </div>
+            <TextCenter>
+              <H6>Made with {'<3'} by <Link href="https://aliwaseem.com">Ali Waseem</Link></H6>
+            </TextCenter>
           </FadeIn>
-        </div>
+        </Container>
       </div>
     );
   }

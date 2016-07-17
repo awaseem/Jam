@@ -20,6 +20,7 @@
 - Code
 - Tables
 - Spacing
+- Image
 - Utilities
 - Clearing
 - Media Queries
@@ -441,6 +442,12 @@ ul,
 ol,
 form {
   margin-bottom: 2.5rem; }
+
+/* Image
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+img {
+  margin-bottom: 1.5rem;
+}
 
 
 /* Utilities
