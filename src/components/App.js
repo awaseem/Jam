@@ -356,7 +356,7 @@ Import { Button } from 'jam-components';`
                     Typography is also similar to Skeleton but every
                     header and paragraph is wrapped
                     in a React component.
-                    So each tag starts with a Capital instead.
+                    So each tag starts with a capital instead.
                     Other type basics like <Link href="">anchors</Link>,
                     <Bold>strong</Bold>, <Emp>emphasis</Emp>,
                     and <Underline>underline</Underline> are all obviously included.
@@ -671,7 +671,7 @@ Import { Button } from 'jam-components';`
                 </Col>
                 <Col num="six">
                   <PopIn autoplay play={this.state.playPopIn}>
-                    <H5>Hello world, I'll Pop In!</H5>
+                    <H5>Hello World, I'll Pop In!</H5>
                   </PopIn>
                   <Button click={this.clickPopIn}>play</Button>
                 </Col>
@@ -682,14 +682,14 @@ Import { Button } from 'jam-components';`
                   <CodeBlock>
                   {
                     `<FadeIn autoplay play={this.state.playFadeIn}>
-  <H5>Hello world, I'll Fade In!</H5>
+  <H5>Hello World, I'll Fade In!</H5>
 </FadeIn>`
                   }
                   </CodeBlock>
                 </Col>
                 <Col num="six">
                   <FadeIn autoplay play={this.state.playFadeIn} delay={0}>
-                    <H5>Hello world, I'll Fade In!</H5>
+                    <H5>Hello World, I'll Fade In!</H5>
                   </FadeIn>
                   <Button click={this.clickFadeIn}>play</Button>
                 </Col>
@@ -700,14 +700,14 @@ Import { Button } from 'jam-components';`
                   <CodeBlock>
                   {
                     `<PopOut play={this.state.playPopOut}>
-  <H5>Hello world, I'll Pop In!</H5>
+  <H5>Hello World, I'll Pop In!</H5>
 </PopOut>`
                   }
                   </CodeBlock>
                 </Col>
                 <Col num="six">
                   <PopOut play={this.state.playPopOut}>
-                    <H5>Hello world, I'll Pop In!</H5>
+                    <H5>Hello World, I'll Pop In!</H5>
                   </PopOut>
                   <Button click={this.clickPopOut}>play</Button>
                 </Col>
@@ -718,14 +718,14 @@ Import { Button } from 'jam-components';`
                   <CodeBlock>
                   {
                     `<FadeOut play={this.state.playFadeOut} delay={0}>
-  <H5>Hello world, I'll Fade In!</H5>
+  <H5>Hello World, I'll Fade In!</H5>
 </FadeOut>`
                   }
                   </CodeBlock>
                 </Col>
                 <Col num="six">
                   <FadeOut play={this.state.playFadeOut} delay={0}>
-                    <H5>Hello world, I'll Fade In!</H5>
+                    <H5>Hello World, I'll Fade In!</H5>
                   </FadeOut>
                   <Button click={this.clickFadeOut}>play</Button>
                 </Col>
