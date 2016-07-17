@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack-dev-server",
-    "deploy": "NODE_ENV=production webpack -p --config webpack.config.website.js",
-    "build": "NODE_ENV=production webpack -p --config webpack.config.npm.js",
-    "prepublish": "npm run build"
+    "build-website": "NODE_ENV=production webpack -p --config webpack.config.website.js",
+    "build-npm": "NODE_ENV=production webpack -p --config webpack.config.npm.js; cp src/css/skeleton.css lib/",
+    "prepublish": "npm run build-npm"
   },
   "repository": {
     "type": "git",
