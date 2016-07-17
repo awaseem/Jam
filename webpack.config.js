@@ -22,9 +22,8 @@ module.exports = {
         extensions: ["", ".js", ".jsx"]
     },
     output: {
-        path: __dirname + "/dist",
-        publicPath: "/",
-        filename: "bundle.js"
+        path: __dirname + "/lib/",
+        filename: 'index.js',
     },
     devServer: {
         contentBase: "./dist",

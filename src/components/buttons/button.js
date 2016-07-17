@@ -29,25 +29,28 @@ class BounceButton extends React.Component {
   }
 
   mouseOver() {
+    // pause any other animation cycle
+    if (this.anime) {
+      this.anime.pause();
+    }
     // change animation to scale out
-    this.state = { anime: anime({
+    this.anime = anime({
       targets: this.domNode,
       scale: 1.25,
-      delay: 100,
+      delay: 200,
       duration: 500,
-    }) };
+    });
   }
 
   mouseLeave() {
-    // pause any other animation cycle
-    this.state.anime.pause();
+    this.anime.pause();
     // change animation to scale back in
-    this.state = { anime: anime({
+    this.anime = anime({
       targets: this.domNode,
       scale: 1,
-      delay: 100,
+      delay: 200,
       duration: 500,
-    }) };
+    });
   }
 
   render() {
@@ -55,7 +58,7 @@ class BounceButton extends React.Component {
       <button
         className={this.chooseColor(this.props.color)}
         ref="bounceButton"
-        onMouseOver={this.mouseOver}
+        onMouseEnter={this.mouseOver}
         onMouseLeave={this.mouseLeave}
         onClick={this.props.click}
         onDoubleClick={this.props.doubleClick}
