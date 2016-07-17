@@ -100,7 +100,9 @@ export default class App extends React.Component {
           <Header image="http://i.imgur.com/wC0tc3e.png" height="75vh">
             <H1 align="center">Jam</H1>
             <P align="center">Sweet and Simple</P>
-            <TextCenter><Button color="black">Let's Get Started</Button></TextCenter>
+            <TextCenter>
+              <Button click={() => window.scrollTo(0, 750)} color="black">Let's Get Started</Button>
+            </TextCenter>
           </Header>
         </FadeIn>
         <Container>
@@ -120,10 +122,10 @@ export default class App extends React.Component {
             <div id="getting-started">
               <H2>Getting Started</H2>
               <P>
-                Simply install Jam via npm:
+                Simply install Jam via npm and ensure React and React-Dom are avaliable:
               </P>
               <CodeBlock>
-                npm install Jam --save
+                npm install jam-components --save
               </CodeBlock>
               <P>
                 Then Import the component you'd like to use:
@@ -354,8 +356,9 @@ export default class App extends React.Component {
                     header and paragraph is wrapped
                     in a React component.
                     So each tag starts with a Capital instead.
-                    Other type basics like <Link href="">anchors</Link>, <Bold>strong</Bold>, <Emp>emphasis</Emp>,
-                    and <u>underline</u> are all obviously included.
+                    Other type basics like <Link href="">anchors</Link>,
+                    <Bold>strong</Bold>, <Emp>emphasis</Emp>,
+                    and <Underline>underline</Underline> are all obviously included.
                   </P>
                   <P>
                     The typography base is <a href="https://www.google.com/fonts/specimen/Lato">Lato Light</a> served by Google,
