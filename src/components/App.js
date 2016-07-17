@@ -132,7 +132,8 @@ export default class App extends React.Component {
               </P>
               <CodeBlock>
               {
-                `Import React from 'react';\nImport { Button } from 'jam';`
+                `Import React from 'react';\nImport ReactDom from 'react-dom';
+Import { Button } from 'jam-components';`
               }
               </CodeBlock>
               <Hr />
