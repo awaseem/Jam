@@ -19,7 +19,11 @@ Import React from 'react';
 Import { Button } from 'jam';
 ```
 
+## Docs
+
+Check out the docs [here!](https://awaseem.github.io/Jam/)
+
 ## Thank you
 
-This is not possible without the amazing Skeleton CSS framework! 
-if you like this component library be sure to check them out [here](http://getskeleton.com/)!
+This is not possible without the amazing Skeleton CSS framework and anime.js! 
+if you like this component library be sure to check them out [here](http://getskeleton.com/) and [here](http://anime-js.com/)!
