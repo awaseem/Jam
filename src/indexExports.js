@@ -29,7 +29,6 @@ import Link from './components/misc/link';
 import Bold from './components/misc/bold';
 import Emp from './components/misc/emp';
 import Underline from './components/misc/underline';
-import './css/skeleton.css';
 
 export {
   H1,

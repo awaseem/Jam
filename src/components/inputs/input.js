@@ -3,6 +3,8 @@ import ReactDom from 'react-dom';
 import anime from 'animejs';
 import styles from '../../css/skeleton.css';
 
+console.log(styles);
+
 class Input extends React.Component {
   constructor(props) {
     super(props);
@@ -40,11 +42,11 @@ class Input extends React.Component {
   render() {
     return (
       <div>
-        <label>{this.props.label}</label>
+        <label className={styles.label}>{this.props.label}</label>
         <input
           onFocus={this.focus}
           onBlur={this.blur}
-          className={styles['u-full-width']}
+          className={`${styles['u-full-width']} ${styles.input}`}
           type={this.props.type}
           placeholder={this.props.placeholder}
           name={this.props.name}

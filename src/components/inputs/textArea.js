@@ -46,7 +46,7 @@ class TextArea extends React.Component {
         <textarea
           onFocus={this.focus}
           onBlur={this.blur}
-          className={styles['u-full-width']}
+          className={`${styles['u-full-width']} ${styles.textarea}`}
           placeholder={this.props.placeholder}
           ref="zoomInput"
           name={this.props.name}

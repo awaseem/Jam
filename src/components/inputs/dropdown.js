@@ -8,7 +8,7 @@ function Dropdown(props) {
       <label>{props.label}</label>
       <select
         onChange={(e) => props.change(e.target.value)}
-        className={styles['u-full-width']}
+        className={`${styles['u-full-width']} ${styles.select}`}
         name={props.name}
         required={props.required}
         disabled={props.disabled}
