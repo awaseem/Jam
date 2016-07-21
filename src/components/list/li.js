@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from '../../css/skeleton.css';
 
 function Li(props) {
   return (
-    <li>{props.children}</li>
+    <li className={styles.li}>{props.children}</li>
   );
 }
 

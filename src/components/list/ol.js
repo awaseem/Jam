@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from '../../css/skeleton.css';
 
 function Ol(props) {
   return (
-    <ol>{props.children}</ol>
+    <ol className={styles.ol}>{props.children}</ol>
   );
 }
 

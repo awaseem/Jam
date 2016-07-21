@@ -3,8 +3,6 @@ import ReactDom from 'react-dom';
 import anime from 'animejs';
 import styles from '../../css/skeleton.css';
 
-console.log(styles);
-
 class Input extends React.Component {
   constructor(props) {
     super(props);
