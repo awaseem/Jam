@@ -25,7 +25,7 @@ class BounceButton extends React.Component {
       case 'blue':
         return styles['button-success'];
       default:
-        return styles.button;
+        return '';
     }
   }
 
@@ -57,7 +57,7 @@ class BounceButton extends React.Component {
   render() {
     return (
       <button
-        className={this.chooseColor(this.props.color)}
+        className={`${styles.button} ${this.chooseColor(this.props.color)}`}
         ref="bounceButton"
         onMouseEnter={this.mouseOver}
         onMouseLeave={this.mouseLeave}
