@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from '../../css/skeleton.css';
 
 function Container(props) {
   return (
     <div
-      className="container"
+      className={styles.container}
     >{props.children}</div>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import anime from 'animejs';
+import styles from '../../css/skeleton.css';
 
 class Img extends React.Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class Img extends React.Component {
         width={this.props.width || '300px'}
         height={this.props.height || 'auto'}
         style={{ opacity: 0 }}
-        className="u-max-full-width"
+        className={styles['u-max-full-width']}
         src={this.props.src}
         alt={this.props.alt}
         onLoad={this.loaded}

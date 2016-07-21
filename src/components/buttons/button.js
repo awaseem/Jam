@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import anime from 'animejs';
+import styles from '../../css/skeleton.css';
 
 class BounceButton extends React.Component {
   constructor(props) {
@@ -16,15 +17,15 @@ class BounceButton extends React.Component {
   chooseColor(color) {
     switch (color) {
       case 'red':
-        return 'button-primary';
+        return styles['button-primary'];
       case 'green':
-        return 'button-secondary';
+        return styles['button-secondary'];
       case 'black':
-        return 'button-dark';
+        return styles['button-dark'];
       case 'blue':
-        return 'button-success';
+        return styles['button-success'];
       default:
-        return '';
+        return styles.button;
     }
   }
 

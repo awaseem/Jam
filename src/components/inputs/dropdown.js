@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../css/skeleton.css';
 
 function Dropdown(props) {
   const options = props.options.map((x, i) => <option key={i} value={x}>{x}</option>);
@@ -7,7 +8,7 @@ function Dropdown(props) {
       <label>{props.label}</label>
       <select
         onChange={(e) => props.change(e.target.value)}
-        className="u-full-width"
+        className={styles['u-full-width']}
         name={props.name}
         required={props.required}
         disabled={props.disabled}

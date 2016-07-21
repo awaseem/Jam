@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import anime from 'animejs';
+import styles from '../../css/skeleton.css';
 
 class Input extends React.Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class Input extends React.Component {
         <input
           onFocus={this.focus}
           onBlur={this.blur}
-          className="u-full-width"
+          className={styles['u-full-width']}
           type={this.props.type}
           placeholder={this.props.placeholder}
           name={this.props.name}

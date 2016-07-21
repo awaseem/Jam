@@ -15,7 +15,7 @@ module.exports = {
             loader: "react-hot!babel"
         }, {
             test: /\.css$/, // Only .css files
-            loader: "react-hot!style!css" // Run both loaders
+            loader: "react-hot!style!css?modules" // Run both loaders
         }]
     },
     resolve: {

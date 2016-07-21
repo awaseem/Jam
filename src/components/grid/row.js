@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from '../../css/skeleton.css';
 
 function Row(props) {
   return (
-    <div className="row">{props.children}</div>
+    <div className={styles.row}>{props.children}</div>
   );
 }
 

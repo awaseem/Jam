@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import anime from 'animejs';
+import styles from '../../css/skeleton.css';
 
 class TextArea extends React.Component {
   constructor(props) {
@@ -45,7 +46,7 @@ class TextArea extends React.Component {
         <textarea
           onFocus={this.focus}
           onBlur={this.blur}
-          className="u-full-width"
+          className={styles['u-full-width']}
           placeholder={this.props.placeholder}
           ref="zoomInput"
           name={this.props.name}

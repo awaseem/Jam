@@ -11,7 +11,7 @@ module.exports = {
             loader: "babel"
         }, {
             test: /\.css$/, // Only .css files
-            loader: "style!css" // Run both loaders
+            loader: "style!css?modules" // Run both loaders
         }]
     },
     resolve: {

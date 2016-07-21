@@ -1,8 +1,10 @@
 import React from 'react';
+import styles from '../../css/skeleton.css';
 
 function Col(props) {
+  const colNum = props.num;
   return (
-    <div className={`${props.num} ${props.num === 'one' ? 'column' : 'columns'}`}>
+    <div className={`${styles[colNum]} ${props.num === 'one' ? styles.column : styles.columns}`}>
       {props.children}
     </div>
   );
