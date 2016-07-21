@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from '../../css/skeleton.css';
 
 function Code(props) {
   return (
-    <code>{props.children}</code>
+    <code className={styles.code}>{props.children}</code>
   );
 }
 

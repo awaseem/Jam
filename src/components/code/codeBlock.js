@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from '../../css/skeleton.css';
 
 function CodeBlock(props) {
   return (
-    <pre><code>
+    <pre className={styles.pre}><code className={styles.code}>
       {props.children}
     </code></pre>
   );
