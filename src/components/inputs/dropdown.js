@@ -5,7 +5,7 @@ function Dropdown(props) {
   const options = props.options.map((x, i) => <option key={i} value={x}>{x}</option>);
   return (
     <div>
-      <label>{props.label}</label>
+      <label className={styles.label}>{props.label}</label>
       <select
         onChange={(e) => props.change(e.target.value)}
         className={`${styles['u-full-width']} ${styles.select}`}

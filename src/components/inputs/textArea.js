@@ -42,7 +42,7 @@ class TextArea extends React.Component {
   render() {
     return (
       <div>
-        <label>{this.props.label}</label>
+        <label className={styles.label}>{this.props.label}</label>
         <textarea
           onFocus={this.focus}
           onBlur={this.blur}
