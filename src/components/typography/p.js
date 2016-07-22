@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from '../../css/skeleton.css';
 
 function P(props) {
   return (
-    <p style={{ textAlign: props.align }}>{props.children}</p>
+    <p className={styles.p} style={{ textAlign: props.align }}>{props.children}</p>
   );
 }
 

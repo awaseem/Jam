@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from '../../css/skeleton.css';
 
 function H5(props) {
   return (
-    <h5 style={{ textAlign: props.align }}>{props.children}</h5>
+    <h5 className={styles.h5} style={{ textAlign: props.align }}>{props.children}</h5>
   );
 }
 

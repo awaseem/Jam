@@ -25,7 +25,7 @@ class Img extends React.Component {
         width={this.props.width || '300px'}
         height={this.props.height || 'auto'}
         style={{ opacity: 0 }}
-        className={styles['u-max-full-width']}
+        className={`${styles['u-max-full-width']} ${styles.img}`}
         src={this.props.src}
         alt={this.props.alt}
         onLoad={this.loaded}

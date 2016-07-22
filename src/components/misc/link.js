@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from '../../css/skeleton.css';
 
 function Href(props) {
   return (
-    <a href={props.href}>{props.children}</a>
+    <a className={styles.a} href={props.href}>{props.children}</a>
   );
 }
 

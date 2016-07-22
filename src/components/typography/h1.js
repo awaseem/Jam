@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from '../../css/skeleton.css';
 
 function H1(props) {
   return (
-    <h1 style={{ textAlign: props.align }}>{props.children}</h1>
+    <h1 className={styles.h1} style={{ textAlign: props.align }}>{props.children}</h1>
   );
 }
 
