@@ -16,7 +16,7 @@ Then Import the part you'd like to use:
 
 ```
 Import React from 'react';
-Import { Button } from 'jam';
+Import { Button } from 'jam-components';
 ```
 
 ## Docs
