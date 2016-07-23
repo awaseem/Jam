@@ -3,11 +3,8 @@
   color: #FFF;
   margin-bottom: 10px;
   border-radius: 5px;
-}
-
-.col {
-  background-color: #7fb685;
-  color: #FFF;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  font-size: 0.9375em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6;
+  font-weight: 400; 
+  font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

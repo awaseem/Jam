@@ -30,6 +30,8 @@ import Link from './misc/link';
 import Bold from './misc/bold';
 import Emp from './misc/emp';
 import Underline from './misc/underline';
+import css from '../css/skeleton.css';
+import customCss from '../css/website.css';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -149,92 +151,92 @@ Import { Button } from 'jam-components';`
               </P>
               <TextCenter>
                 <Row>
-                  <Col num="one">
+                  <div className={`${css.one} ${css.column} ${customCss.col}`}>
                     One
-                  </Col>
-                  <Col num="eleven">
+                  </div>
+                  <div className={`${css.eleven} ${css.columns} ${customCss.col}`}>
                     Eleven
-                  </Col>
+                  </div>
                 </Row>
                 <Row>
-                  <Col num="two">
+                  <div className={`${css.two} ${css.columns} ${customCss.col}`}>
                     Two
-                  </Col>
-                  <Col num="ten">
+                  </div>
+                  <div className={`${css.ten} ${css.columns} ${customCss.col}`}>
                     Ten
-                  </Col>
+                  </div>
                 </Row>
                 <Row>
-                  <Col num="three">
+                  <div className={`${css.three} ${css.columns} ${customCss.col}`}>
                     Three
-                  </Col>
-                  <Col num="nine">
+                  </div>
+                  <div className={`${css.nine} ${css.columns} ${customCss.col}`}>
                     Nine
-                  </Col>
+                  </div>
                 </Row>
                 <Row>
-                  <Col num="four">
+                  <div className={`${css.four} ${css.columns} ${customCss.col}`}>
                     Four
-                  </Col>
-                  <Col num="eight">
+                  </div>
+                  <div className={`${css.eight} ${css.columns} ${customCss.col}`}>
                     Eight
-                  </Col>
+                  </div>
                 </Row>
                 <Row>
-                  <Col num="five">
+                  <div className={`${css.five} ${css.columns} ${customCss.col}`}>
                     Five
-                  </Col>
-                  <Col num="seven">
+                  </div>
+                  <div className={`${css.seven} ${css.columns} ${customCss.col}`}>
                     Seven
-                  </Col>
+                  </div>
                 </Row>
                 <Row>
-                  <Col num="six">
+                  <div className={`${css.six} ${css.columns} ${customCss.col}`}>
                     Six
-                  </Col>
-                  <Col num="six">
+                  </div>
+                  <div className={`${css.six} ${css.columns} ${customCss.col}`}>
                     Six
-                  </Col>
+                  </div>
                 </Row>
                 <Row>
-                  <Col num="seven">
+                  <div className={`${css.seven} ${css.columns} ${customCss.col}`}>
                     Seven
-                  </Col>
-                  <Col num="five">
+                  </div>
+                  <div className={`${css.five} ${css.columns} ${customCss.col}`}>
                     Five
-                  </Col>
+                  </div>
                 </Row>
                 <Row>
-                  <Col num="eight">
+                  <div className={`${css.eight} ${css.columns} ${customCss.col}`}>
                     Eight
-                  </Col>
-                  <Col num="four">
+                  </div>
+                  <div className={`${css.four} ${css.columns} ${customCss.col}`}>
                     Four
-                  </Col>
+                  </div>
                 </Row>
                 <Row>
-                  <Col num="nine">
+                  <div className={`${css.nine} ${css.columns} ${customCss.col}`}>
                     Nine
-                  </Col>
-                  <Col num="three">
+                  </div>
+                  <div className={`${css.three} ${css.columns} ${customCss.col}`}>
                     Three
-                  </Col>
+                  </div>
                 </Row>
                 <Row>
-                  <Col num="ten">
+                  <div className={`${css.ten} ${css.columns} ${customCss.col}`}>
                     Ten
-                  </Col>
-                  <Col num="two">
+                  </div>
+                  <div className={`${css.two} ${css.columns} ${customCss.col}`}>
                     Two
-                  </Col>
+                  </div>
                 </Row>
                 <Row>
-                  <Col num="eleven">
+                  <div className={`${css.eleven} ${css.columns} ${customCss.col}`}>
                     Eleven
-                  </Col>
-                  <Col num="one">
+                  </div>
+                  <div className={`${css.one} ${css.column} ${customCss.col}`}>
                     One
-                  </Col>
+                  </div>
                 </Row>
               </TextCenter>
               <CodeBlock>
@@ -464,8 +466,7 @@ Import { Button } from 'jam-components';`
               </Row>
               <CodeBlock>
                 {
-                  `
-<Input
+                  `<Input
   change={this.emailInput}
   label="Email" placeholder="test@test.com" type="email"
 />
