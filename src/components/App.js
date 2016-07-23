@@ -1,4 +1,5 @@
 import React from 'react';
+import jump from 'jump.js'
 import H1 from './typography/h1';
 import H2 from './typography/h2';
 import H3 from './typography/h3';
@@ -41,6 +42,15 @@ export default class App extends React.Component {
     this.clickFadeIn = this.clickFadeIn.bind(this);
     this.clickFadeOut = this.clickFadeOut.bind(this);
     this.clickPopOut = this.clickPopOut.bind(this);
+  }
+
+  clickLetGetStarted() {
+    jump('#getting-started', {
+      duration: 500,
+      offset: 0,
+      callback: undefined,
+      a11y: false,
+    });
   }
 
   clickPopIn() {
@@ -103,7 +113,7 @@ export default class App extends React.Component {
             <H1 align="center">Jam</H1>
             <P align="center">Sweet and Simple</P>
             <TextCenter>
-              <Button click={() => window.scrollTo(0, 750)} color="black">Let's Get Started</Button>
+              <Button click={this.clickLetGetStarted} color="black">Let's Get Started</Button>
             </TextCenter>
           </Header>
         </FadeIn>
