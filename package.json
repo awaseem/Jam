@@ -1,6 +1,6 @@
 {
   "name": "jam-components",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Sweet and Simple",
   "main": "./lib/index.js",
   "scripts": {

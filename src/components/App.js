@@ -362,7 +362,7 @@ Import { Button } from 'jam-components';`
                     and <Underline>underline</Underline> are all obviously included.
                   </P>
                   <P>
-                    The typography base is <a href="https://www.google.com/fonts/specimen/Lato">Lato Light</a> served by Google,
+                    The typography base is <Link href="https://www.google.com/fonts/specimen/Lato">Lato Light</Link> served by Google,
                     set at 15rem (15px) over a 1.6 line height (24px).
                   </P>
                   <H5>Props</H5>

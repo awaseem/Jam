@@ -1,11 +1,11 @@
-.grid .row .columns{
+.col {
   background-color: #7fb685;
   color: #FFF;
   margin-bottom: 10px;
   border-radius: 5px;
 }
 
-.grid .row .column{
+.col {
   background-color: #7fb685;
   color: #FFF;
   margin-bottom: 10px;
