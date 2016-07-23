@@ -1,9 +1,5 @@
 ![alt text](./assets/JamCover.png "Logo Title Text 1")
 
-# Jam
-
-Sweet and simple React component library.
-
 ## Getting Started
 
 Simply install Jam via NPM and make sure that React and React-Dom is installed :
