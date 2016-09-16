@@ -13,6 +13,7 @@ class TextArea extends React.Component {
 
   componentDidMount() {
     this.domNode = ReactDom.findDOMNode(this.refs.zoomInput);
+    this.domNode.value = this.props.value || '';
   }
 
   handleChange(e) {
@@ -68,6 +69,7 @@ TextArea.propTypes = {
   required: React.PropTypes.bool,
   maxLength: React.PropTypes.number,
   name: React.PropTypes.string,
+  value: React.PropTypes.string,
 };
 
 export default TextArea;

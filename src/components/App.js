@@ -503,6 +503,8 @@ Import { Button } from 'jam-components';`
                   <P>Placeholder for the text input.</P>
                   <P><Emp>name: String</Emp></P>
                   <P>Name for the text input.</P>
+                  <P><Emp>value: String</Emp></P>
+                  <P>Default value for the text input</P>
                   <P><Emp>maxLength: Number</Emp></P>
                   <P>Max length for the text input.</P>
                   <P><Emp>disabled: Boolean</Emp></P>
@@ -541,6 +543,8 @@ Import { Button } from 'jam-components';`
                   <P>Placeholder for the text input.</P>
                   <P><Emp>name: String</Emp></P>
                   <P>Name for the text input.</P>
+                  <P><Emp>value: String</Emp></P>
+                  <P>Default value for the text input</P>
                   <P><Emp>maxLength: Number</Emp></P>
                   <P>Max length for the text input.</P>
                   <P><Emp>disabled: Boolean</Emp></P>

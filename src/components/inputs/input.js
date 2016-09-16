@@ -13,6 +13,7 @@ class Input extends React.Component {
 
   componentDidMount() {
     this.domNode = ReactDom.findDOMNode(this.refs.zoomInput);
+    this.domNode.value = this.props.value || '';
   }
 
   handleChange(e) {
@@ -68,6 +69,7 @@ Input.propTypes = {
   maxLength: React.PropTypes.number,
   disabled: React.PropTypes.bool,
   required: React.PropTypes.bool,
+  value: React.PropTypes.string,
 };
 
 export default Input;
