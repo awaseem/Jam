@@ -89,20 +89,20 @@ export default class App extends React.Component {
     });
   }
 
-  emailInput(value) {
-    console.log(value);
+  emailInput(e) {
+    console.log(e.target.value);
   }
 
-  nameInput(value) {
-    console.log(value);
+  nameInput(e) {
+    console.log(e.target.value);
   }
 
-  dropdownInput(value) {
-    console.log(value);
+  dropdownInput(e) {
+    console.log(e.target.value);
   }
 
-  messageTextArea(value) {
-    console.log(value);
+  messageTextArea(e) {
+    console.log(e.target.value);
   }
 
   render() {
@@ -459,7 +459,7 @@ Import { Button } from 'jam-components';`
                   />
                 </Col>
                 <Col num="six">
-                  <Input change={this.nameInput} label="Name" placeholder="Jon Doe" type="text" />
+                  <Input change={this.nameInput} label="Name" name="name" placeholder="Jon Doe" type="text" />
                 </Col>
                 <Col num="twelve">
                   <Dropdown

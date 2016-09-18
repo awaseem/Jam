@@ -17,7 +17,7 @@ class Input extends React.Component {
   }
 
   handleChange(e) {
-    this.props.change(e.target.value);
+    this.props.change(e);
   }
 
   focus() {
