@@ -21,6 +21,7 @@ function Dropdown(props) {
 
 Dropdown.propTypes = {
   label: React.PropTypes.string,
+  enable: React.PropTypes.bool,
   options: React.PropTypes.array,
   change: React.PropTypes.func.isRequired,
   disabled: React.PropTypes.bool,

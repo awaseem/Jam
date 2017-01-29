@@ -45,8 +45,8 @@ class TextArea extends React.Component {
       <div>
         <label className={styles.label}>{this.props.label}</label>
         <textarea
-          onFocus={this.focus}
-          onBlur={this.blur}
+          onFocus={this.props.enable ? this.focus : undefined}
+          onBlur={this.props.enable ? this.blur : undefined}
           className={`${styles['u-full-width']} ${styles.textarea}`}
           placeholder={this.props.placeholder}
           ref="zoomInput"
@@ -63,6 +63,7 @@ class TextArea extends React.Component {
 
 TextArea.propTypes = {
   label: React.PropTypes.string,
+  enable: React.PropTypes.bool,
   placeholder: React.PropTypes.string,
   change: React.PropTypes.func.isRequired,
   disabled: React.PropTypes.bool,

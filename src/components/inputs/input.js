@@ -43,8 +43,8 @@ class Input extends React.Component {
       <div>
         <label className={styles.label}>{this.props.label}</label>
         <input
-          onFocus={this.focus}
-          onBlur={this.blur}
+          onFocus={this.props.enable ? this.focus : undefined}
+          onBlur={this.props.enable ? this.blur : undefined}
           className={`${styles['u-full-width']} ${styles.input}`}
           type={this.props.type}
           placeholder={this.props.placeholder}
@@ -62,6 +62,7 @@ class Input extends React.Component {
 
 Input.propTypes = {
   label: React.PropTypes.string,
+  enable: React.PropTypes.bool,
   type: React.PropTypes.string,
   placeholder: React.PropTypes.string,
   name: React.PropTypes.string,
