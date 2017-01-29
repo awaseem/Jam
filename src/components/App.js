@@ -1,5 +1,5 @@
 import React from 'react';
-import jump from 'jump.js'
+import jump from 'jump.js';
 import H1 from './typography/h1';
 import H2 from './typography/h2';
 import H3 from './typography/h3';
@@ -459,7 +459,12 @@ Import { Button } from 'jam-components';`
                   />
                 </Col>
                 <Col num="six">
-                  <Input change={this.nameInput} label="Name" name="name" placeholder="Jon Doe" type="text" />
+                  <Input
+                    change={this.nameInput}
+                    label="Name" name="name"
+                    placeholder="Jon Doe"
+                    type="text"
+                  />
                 </Col>
                 <Col num="twelve">
                   <Dropdown
